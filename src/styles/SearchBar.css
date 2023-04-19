@@ -1,0 +1,26 @@
+.nav {
+    background-color: darkblue;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.searchInput {
+    border: 0px;
+    border-radius: 8px;
+    outline-style: none;
+    position: absolute;
+    padding: 5px;
+}
+
+.searchButton {
+    border: 0px;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 25px;
+    position: relative;
+    right: -70px;
+    top: -2px;
+}
