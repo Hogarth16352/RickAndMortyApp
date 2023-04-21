@@ -1,4 +1,4 @@
-.container{
+.characterCard{
     background-color: rgb(13,139,177);
     margin: 1em;
     width: fit-content;
@@ -9,6 +9,24 @@
     display: flex;
     flex-direction: column;
     position: relative;
+}
+
+.dataCard{
+    background-color: rgb(13,139,177);
+    margin: 1em;
+    width: 300px;
+    padding: 1em;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    text-shadow: 6px 4px 7px rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.characterCard:hover {
+    opacity: 0.8;
 }
 
 .closeButton{
@@ -29,4 +47,18 @@
     font-weight: bold;
     transition: 1s;
     color: black
+}
+
+.characterImage{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: azure;
+}
+
+@media (max-width: 560px) {
+    .characterImage{
+        width: 90%;
+        height: auto;
+    }
 }

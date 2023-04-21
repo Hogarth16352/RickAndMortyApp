@@ -1,21 +1,28 @@
 import React from 'react';
 import '../../styles/Card.css';
 
-export default function Card({ id, name, status, species, gender, origin, image}) {
-   const onClose = () => window.alert('Emulamos que se cierra la card');
+export default function Card(props) {
    return (
-      <div className='container'>
+      <div className='cardContainer'>
+         <div className='characterCard'>
          <button 
          className = 'closeButton'
-         onClick={onClose}
+         onClick={props.onClose}
          >
             X
          </button>
-         <img src={image} alt={name} />
-         <h2>Name: {name}</h2>
-         <h2>Status: {status}</h2>
-         <h2>Specie: {species}</h2>
-         <h2>Gender: {gender}</h2>
+         <img 
+              className = 'characterImage'
+              src={props.image} 
+              alt={props.name} 
+              />
+         </div>
+         <div className='dataCard'>
+            <h2>Name: {props.name}</h2>
+            <h2>Status: {props.status}</h2>
+            <h2>Specie: {props.species}</h2>
+            <h2>Gender: {props.gender}</h2>
+         </div>
       </div>
       )
 }

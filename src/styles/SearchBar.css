@@ -8,19 +8,50 @@
 }
 
 .searchInput {
+    font-size: 1.2rem;
+    height: 35px;
     border: 0px;
     border-radius: 8px;
     outline-style: none;
     position: absolute;
-    padding: 5px;
+    padding: 5px 75px 5px 20px;/*Para evitar que el texto pase por encima del icono */
 }
 
-.searchButton {
+.addButton {
+    color: rgb(7, 237, 64);
     border: 0px;
     background-color: transparent;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 2.2rem;
     position: relative;
-    right: -70px;
+    right: -122px;
     top: -2px;
+    height: 100%;
 }
+
+.randomButton{
+    color: rgb(7, 237, 64);
+    border: 0px;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 2rem;
+    position: relative;
+    right: -122px;
+    top: -2px;
+    height: 100%;
+}
+
+.addButton:hover {
+    color: rgb(29, 169, 187);
+}
+
+.randomButton:hover {
+    color: rgb(190, 0, 0);
+}
+
+.searchInput:focus {
+    outline: none;
+    border: 1px solid #5eff5e;
+    box-shadow: 0 0 5px #a8ff90;
+}
+
