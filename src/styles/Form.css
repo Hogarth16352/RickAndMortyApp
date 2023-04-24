@@ -1,0 +1,37 @@
+.formDiv{
+    margin: auto;
+    display:block;
+    background-color: red;
+    align-items: center;
+    width: fit-content;
+}
+
+.formTitle{
+    align-items: center;
+    height: auto;
+    margin: auto;
+}
+
+.formContainer {
+    border-radius: 10px;
+    display: block;
+    align-items: flex-end;
+    margin: auto;
+    height: auto; 
+    width: fit-content;
+    margin-top: 20px;
+    color: white;
+    background-color: #202020;
+    padding: 25px;
+}
+
+.buttonForm {
+    border-radius: 20px;
+    background-color: #FFC107;
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}

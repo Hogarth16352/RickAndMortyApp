@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+
 import '../../styles/Card.css';
 
 export default function Card(props) {
@@ -11,11 +13,14 @@ export default function Card(props) {
          >
             X
          </button>
+         <Link to={`/detail/${props.id}`} >
          <img 
               className = 'characterImage'
               src={props.image} 
               alt={props.name} 
               />
+         </Link>
+         
          </div>
          <div className='dataCard'>
             <h2>Name: {props.name}</h2>

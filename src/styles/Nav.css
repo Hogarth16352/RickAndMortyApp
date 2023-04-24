@@ -1,0 +1,8 @@
+.navContainer {
+    background-color: darkblue;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1em;
+}
