@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { FaRandom } from 'react-icons/fa';
+
 import '../../styles/SearchBar.css';
 
 export default function SearchBar(props) {
@@ -10,18 +12,24 @@ export default function SearchBar(props) {
       setCharacter(value);
    }
 
-   const handleSearch = () => {//Para limpiar el contenedor despues de cada busqueda
+   const handleSearch = () => {
       props.onSearch(character);
       setCharacter("");
    }
 
-   const randomSearch = () => {//Para limpiar el contenedor despues de cada busqueda
+   const randomSearch = () => {
       props.onSearch(Math.floor(Math.random() * 826) + 1);
       setCharacter("");
    }
 
+   const handleReset = () => {
+      props.resetState();
+      setCharacter("");
+   }
+
    return (
-      <div className="nav">
+      <div className="searchContainer">
+         <div className="searchBox">
          <input 
             className = 'searchInput' 
             type='search' 
@@ -29,15 +37,29 @@ export default function SearchBar(props) {
             value = {character}
             onChange={handleChange}
          />
-         <button 
-            className = 'addButton' 
+         <button             
             onClick={ handleSearch }
+            className = "addButton" 
          >+</button>
+         </div>
+         <div>
          <button 
             className = 'randomButton'
             onClick={ randomSearch }>
-            R
-         </button>
+            <FaRandom size={28}/>
+         </button>            
+         </div>
+         <div>
+         <button 
+            className = 'resetButton'
+            onClick={ handleReset }>
+            Reset
+         </button>            
+         </div>
+         <div>
+            
+         </div>
+         
       </div>
    );
 }

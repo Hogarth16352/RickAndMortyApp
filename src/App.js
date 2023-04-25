@@ -25,7 +25,7 @@ function App() {
        }
      }
 
-     function logout() {
+    const logout = () => {
       setCharacters([]);
       setAccess(false);
       navigate('/');
@@ -55,15 +55,20 @@ function App() {
       setCharacters(characters.filter((char) => char.id !== id));
     };
 
+   const resetState = () => {
+      setCharacters([]);
+    }
+
     const location = useLocation();
 
    return (
-      <div className='App'>
+      <div className='App' >
          {/* <Nav  onSearch={onSearch}/>
          <Cards characters={characters}  onClose={onClose}/> */}
-         {location.pathname !== "/" && <Nav onSearch={onSearch} logout={logout} />}
+         {location.pathname !== "/" && <Nav onSearch={onSearch} logout={logout} resetState={resetState} />}
+
          <Routes>
-            <Route exact path="/" element={<Form login={login}/>} />
+            <Route exact path="/" element={<Form login={login} />} />
             <Route path="/about" element={<About />} />
             <Route path="/home" element={<Cards characters={characters} onClose={onClose} /> } />
             <Route path="/detail/:detailId" element={<Detail />} />

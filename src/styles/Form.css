@@ -1,37 +1,116 @@
-.formDiv{
-    margin: auto;
-    display:block;
-    background-color: red;
+.formDiv {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    width: fit-content;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.formTitle{
-    align-items: center;
-    height: auto;
-    margin: auto;
-}
-
-.formContainer {
-    border-radius: 10px;
-    display: block;
-    align-items: flex-end;
-    margin: auto;
-    height: auto; 
-    width: fit-content;
-    margin-top: 20px;
-    color: white;
-    background-color: #202020;
-    padding: 25px;
-}
-
-.buttonForm {
-    border-radius: 20px;
-    background-color: #FFC107;
-    color: #000000;
-    font-weight: bold;
+.formImage {
+    position: fixed;
     border: none;
+    background-image: url("../assets/portal_login.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 70%;
+    height: 70%;
+    animation: rotateBackground 20s linear infinite;
+    margin-top: 2rem;
+    z-index: -1;
+    margin: 0%;
+  }
+  
+  .formContainer {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: none;
+    padding: 20px;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .formTitle {
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+    color: aqua;
+    -webkit-text-stroke: 1px rgb(13, 13, 12);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out;
+  }
+  
+  label {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: auto;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
     padding: 5px 10px;
-    font-size: 16px;
+    font-size: 24px;
+  }
+  
+  button.buttonForm {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+  
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 24px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button.buttonForm:hover {
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+  }
+
+  .errorInput {
+    border-color: red;
 }
+
+.errorInput:focus {
+    outline-color: red;
+}
+
+  .error{
+    background-color: rgba(139, 37, 37, 0.226);
+    font-weight: bold;
+    color: red;
+    width: auto;
+    padding: 5px 0;
+    font-size: 24px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .formContainer {
+      width: 80%;
+    }
+  }
+
+  @keyframes rotateBackground {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  

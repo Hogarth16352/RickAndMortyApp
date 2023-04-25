@@ -52,5 +52,3 @@ export default function Detail(props) {
 
     )
 }
-
-// {char.origin && <h2>{char.origin.name}</h2>}

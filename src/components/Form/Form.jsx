@@ -39,22 +39,23 @@ export default function Form(props) {
     }
 
     return (
-      <div className = "formDiv"  >
-        <div className='formTitle'>Login Form</div>
+      <div className = "formDiv">
+        <div className="formImage"></div>
       <form className = "formContainer"
         onSubmit={handleSubmit}>
+        <div className='formTitle'>Welcome to Rick and Morty App</div>
         <label htmlFor='username'>
         Username: 
         </label>
         <input 
-        placeholder='Username'
+            placeholder='Username'
             type="text" 
             name="username"     
             value={userData.username} 
             onChange={handleInputChange} 
+            className={errors.username ? 'errorInput' : ''}
             />
-          {errors.username && <p style={{ color: 'red' ,
-        padding: '25px'}} >{errors.username}</p>}
+          {errors.username && <p className='error'>{errors.username}</p>}
 
       <label htmlFor='password'>
         Password: 
@@ -65,15 +66,16 @@ export default function Form(props) {
             name="password" 
             value={userData.password} 
             onChange={handleInputChange}
+            className={errors.password ? 'errorInput' : ''}
+
             />
-          {errors.password && <p style={{ color: 'red' ,
-        padding: '25px'}} >{errors.password}</p>}
+          {errors.password && <p className='error' >{errors.password}</p>}
 
 
       <hr />
       <button type = 'submit'
       className="buttonForm"
-      >Login</button>
+      >Log In</button>
       </form>
       </div>
     );

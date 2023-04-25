@@ -1,8 +1,84 @@
-.navContainer {
-    background-color: darkblue;
-    padding: 1em;
-    display: flex;
-    flex-direction: row;
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  list-style: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.wrapper{
+  width: 100%;
+}
+
+.wrapper .navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 30px;
+  background: #2376aa;
+  height: 60px;
+}
+
+.wrapper .navbar .menu ul li{
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.wrapper .navbar .menu ul li a{
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.buttonNav {
+    width: 80px;
+    letter-spacing: 3px;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    margin: 0 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: 0.5s;
+}
+
+.buttonNav:hover{
+    padding: 0;
+    font-size: 16px;
+    margin: 0 10px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: black;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 730px){
+  .wrapper .navbar{
+    height: auto;
+    padding: 0px;
+    flex-direction: column;
+    height: 200px;
     justify-content: center;
-    margin-bottom: 1em;
+  }
+  .wrapper .navbar .menu ul li{
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+   
+  }
+}
+
+.mood {
+  background: url("../assets/rickandmortyday.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  transition: 1s;
 }
