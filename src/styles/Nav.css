@@ -21,8 +21,9 @@
   align-items: center;
   width: 100%;
   padding: 0 30px;
-  background: #2376aa;
+  background: #3b3c44b6;
   height: 60px;
+  transition: 0.5s;
 }
 
 .wrapper .navbar .menu ul li{
@@ -31,7 +32,7 @@
 }
 
 .wrapper .navbar .menu ul li a{
-  color: #fff;
+  color: rgb(0, 0, 0);
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 12px;
@@ -39,28 +40,34 @@
 
 .buttonNav {
     width: 80px;
-    letter-spacing: 3px;
     position: relative;
     border: none;
     background-color: transparent;
     margin: 0 10px;
-    color: #fff;
+    color: rgb(117, 117, 117);
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 18px;
+    font-weight: bold;
     transition: 0.5s;
 }
 
 .buttonNav:hover{
-    padding: 0;
-    font-size: 16px;
-    margin: 0 10px;
-    letter-spacing: 3px;
-    font-weight: bold;
-    color: black;
+    color: rgb(154, 154, 154);
     transition: 0.5s;
 }
 
+.active button.buttonNav {
+  color: rgb(0, 0, 0);
+  transition: 0.5s;
+}
+
+.logoutContainer li {
+  display: inline; 
+  position: relative;
+}
+
 @media screen and (max-width: 730px){
+
   .wrapper .navbar{
     height: auto;
     padding: 0px;
@@ -68,11 +75,22 @@
     height: 200px;
     justify-content: center;
   }
+
   .wrapper .navbar .menu ul li{
     display: block;
     text-align: center;
     margin: 10px 0;
-   
+    box-sizing: border-box;  
+
+}
+
+  .buttonNav:active{
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+  }
+
+  .logoutContainer li {
+    top: 10px;
   }
 }
 
@@ -80,5 +98,15 @@
   background: url("../assets/rickandmortyday.jpg") no-repeat center center fixed;
   background-size: cover;
   margin: 0;
-  transition: 1s;
+  transition: 0.5s;
+}
+
+.mood .wrapper .navbar{
+  background: rgba(0, 0, 0, 0.9);
+  transition: 0.5s;
+}
+
+.mood .active button.buttonNav {
+  color: rgb(255, 255, 255);
+  transition: 0.5s;
 }

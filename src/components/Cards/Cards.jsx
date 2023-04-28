@@ -1,6 +1,5 @@
 import Card from '../Card/Card';
 import '../../styles/Cards.css';
-import 'animate.css';
  
 
 export default function Cards(props) {

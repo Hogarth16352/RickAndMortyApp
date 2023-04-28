@@ -24,17 +24,17 @@ export const Nav = ( props ) => {
     }, [props.onSearch, props.resetState]);
 
   return (
-   <div class="wrapper">
-      <div class="navbar">
-         <div class="menu">
+   <div className="wrapper">
+      <div className="navbar">
+         <div className="menu">
             <ul>
             <li>
-               <NavLink to="/home">
-                  <button className="buttonNav">Home</button>
-               </NavLink>
+            <NavLink to="/home" activeClassName="active">
+               <button className="buttonNav">Home</button>
+            </NavLink>
             </li>
             <li>
-               <NavLink to="/favs">
+               <NavLink to="/favorites"activeClassName="active">
                   <button className="buttonNav">Favorites</button>
                </NavLink>            
             </li>
@@ -46,10 +46,10 @@ export const Nav = ( props ) => {
             </ul>
          </div>
          <SearchBar onSearch={props.onSearch} resetState={props.resetState}/>
-         <div class="menu">
+         <div className="logoutContainer">
             <ul>
             <li>
-               <button className="buttonNav mood-item"><FaRegMoon size={40}/></button>  
+               <button className="buttonNav mood-item"><FaRegMoon size={35}/></button>  
             </li>
 
                <li>

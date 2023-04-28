@@ -17,6 +17,12 @@ export default function SearchBar(props) {
       setCharacter("");
    }
 
+   const handleKeyUp = (event) => {
+      if (event.key === 'Enter' || event.key === 'Intro') {
+         handleSearch();
+      }
+   };
+
    const randomSearch = () => {
       props.onSearch(Math.floor(Math.random() * 826) + 1);
       setCharacter("");
@@ -36,6 +42,7 @@ export default function SearchBar(props) {
             placeholder = "Ingresa ID a buscar"
             value = {character}
             onChange={handleChange}
+            onKeyUp={handleKeyUp}
          />
          <button             
             onClick={ handleSearch }

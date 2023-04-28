@@ -1,0 +1,11 @@
+.favoriteCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 560px) {
+    .favoriteCards Cards{
+        grid-template-columns: 100%;
+    }
+}

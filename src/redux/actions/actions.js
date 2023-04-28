@@ -1,17 +1,30 @@
-import { ADD_FAVORITES, DELETE_FAVORITES } from "./types";
+import { ADD_FAVORITES, DELETE_FAVORITES, FILTER_CHARACTERS, ORDER_CHARACTERS } from "./types";
 
-export function addFavorites(id) {
+export const addFavorites = ( character ) => {
     return {
         type: ADD_FAVORITES,
-        payload: id
+        payload: character
     }
 }
 
-export function deleteFavorites(id) {
+export const deleteFavorites = (id) => {
     return {
         type: DELETE_FAVORITES,
         payload: id
     }
 }
 
+export const filterCards = (gender) => {
+    return {
+        type: FILTER_CHARACTERS,
+        payload: gender
+    }
+}
+
+export const orderCards = (id) => {
+    return {
+        type: ORDER_CHARACTERS,
+        payload: id
+    }
+}
 

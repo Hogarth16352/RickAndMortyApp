@@ -8,6 +8,7 @@ import About from "./components/About/About.jsx";
 import Detail from "./components/Detail/Detail.jsx";
 import Form from './components/Form/Form';
 import NotFound from "./components/NotFound/NotFound";
+import Favorites from "./components/Favorites/Favorites";
 
 
 function App() {
@@ -37,7 +38,11 @@ function App() {
    }, [access]);
 
    function onSearch(id) {
+
+      //const URL_BASE = "https://be-a-rym.up.railway.app/api"
+      //const KEY = "2d0fd52418f5.d36077a3b4c1857914f"
       axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
+      //axios( `${URL_BASE}/character/${id}?key=${KEY}` ).then(({ data }) => {
          if (data.name) {
             const characterExists = characters.find((char) => char.id === data.id);//Se busca el personaje en el estado
             if (!characterExists) {//Si no existe muestra el estado con las imagenes solicitadas
@@ -72,6 +77,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/home" element={<Cards characters={characters} onClose={onClose} /> } />
             <Route path="/detail/:detailId" element={<Detail />} />
+            <Route path="/favorites" element={<Favorites />} />
             <Route path="*" element={<NotFound />} />
          </Routes>
       </div>

@@ -21,34 +21,39 @@ export default function Detail(props) {
     }, [detailId]);
       
     return (
+      <>
+      <header>
+            <h1 className = "firstItem">
+              {character.name}
+            </h1>
+          </header>
         <div className = "detailsContainer">
-          <p className = "firstItem">
-            <strong>NAME: </strong> {character.name}
-          </p>
+          <div className = "imageDetail">
             <img 
-              className = "col characterImage"
-              src={character.image} alt={character.name} />
-            <div  className = "characterDetails">
-              <p>
-                  <strong>STATUS: </strong> {character.status}
-              </p>
-              <p>
-                  <strong>SPECIE: </strong> {character.species}
-              </p>
-              <p>
-                  <strong>GENDER: </strong> {character.gender}
-              </p>
-              {
-                character.origin && 
-                <p><strong>Origin: </strong>{character.origin.name}</p>
-              }
-            </div>
-            <Link to="/home">
-              <div >
+              src={character.image} 
+              alt={character.name} />
+          </div>
+          <div  className = "characterDetails">
+            <p>
+                <strong>STATUS: </strong> {character.status}
+            </p>
+            <p>
+                <strong>SPECIE: </strong> {character.species}
+            </p>
+            <p>
+                <strong>GENDER: </strong> {character.gender}
+            </p>
+            {
+              character.origin && 
+              <p><strong>ORIGIN: </strong>{character.origin.name}</p>
+            }
+          </div>
+            <div className = "buttonBackDiv" >
+              <Link to="/home">
                   <button className="backButton">Go Back</button>
-              </div>
-            </Link>
+              </Link>
+            </div>
         </div>
-
+        </>
     )
 }

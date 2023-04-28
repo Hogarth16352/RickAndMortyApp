@@ -1,37 +1,85 @@
-.backButton {
-    background-color: #FFC107;
-    color: #000000;
-    font-weight: bold;
-    border: none;
-    padding: 5px 10px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  .detailsContainer {
+.detailsContainer {
+    background-color: rgba(0, 0, 0, 0.489);
+    width: fit-content;
+    margin: auto;
+    padding: 0px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
+    border-radius: 20px;
+  }
 
-.col {
+  .col {
     max-width: 400px;
     margin: 15px;
     height: auto;
     height: 80%;
 }
 
-.characterImage{
-    border-radius: 15px;
-}
+  .firstItem {
+    padding: 70px;
+    text-align: center;
+    font-size: 4rem;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+  }
+  
+  .imageDetail{
+    position: relative;
+    display: flex;
+    width: auto;
+  }
 
-.characterDetails {
-    font-size: 1.5rem;
-}
+  .imageDetail img{
+    border-radius: 20px 0px 0px 20px;
+  }
+  
+  .characterDetails {
+    text-align: left;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5rem;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+    transition: 0.5s;
+  }
 
-.firstItem {
-    margin-top: 0;
-}
+  .characterDetails p {
+    padding: 5px;
+  }
+  
+  .buttonBackDiv {
+    position: fixed;
+    bottom: 180px;
+  }
+  
+  .backButton {
+    font-size: 2.5rem;
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .backButton:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s;
+  }
+
+  .mood .firstItem {
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #182bff, 0 0 30px #182bff, 0 0 40px #182bff, 0 0 55px #182bff, 0 0 75px #182bff;
+    transition: 0.5s;
+
+  }
+
+  .mood .characterDetails {
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #182bff, 0 0 30px #182bff, 0 0 40px #182bff, 0 0 55px #182bff, 0 0 75px #182bff;
+    transition: 0.5s;
+
+  }  
 
 @media (max-width: 560px) {
     .characterImage{
