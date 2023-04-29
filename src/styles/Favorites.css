@@ -1,7 +1,6 @@
-.favoriteCards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.containerFavs {
+  display: inline-flex;
+  position: relative;
 }
 
 @media (max-width: 560px) {
@@ -9,3 +8,59 @@
         grid-template-columns: 100%;
     }
 }
+
+.selectDiv {
+  padding: 50px;
+  text-align: center;
+}
+
+select {
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  select:hover {
+    border-color: #33a0ff;
+    box-shadow: 0 0 5px rgba(51, 160, 255, 0.5);
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: #33a0ff;
+    box-shadow: 0 0 5px rgba(51, 160, 255, 0.5);
+  }
+  
+  select option {
+    background-color: white;
+    color: #333;
+  }
+  
+  /* Animación de entrada para el menú desplegable */
+  .select-enter {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  
+  .select-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+  }
+  
+  /* Animación de salida para el menú desplegable */
+  .select-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .select-exit-active {
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+  }

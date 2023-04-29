@@ -59,7 +59,7 @@ export function Card( { id, name, species, status, origin, gender, image, onClos
             </button>
             )}
 
-          {/* { {id} && ( <div className = 'idDiv'>{id}</div>)} */}
+          { !onClose ? <div className='idDiv'>{id}</div> : <div></div>}
 
          <Link to={`/detail/${id}`} >
          <img 

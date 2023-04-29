@@ -21,10 +21,10 @@ export const filterCards = (gender) => {
     }
 }
 
-export const orderCards = (id) => {
+export const orderCards = (orden) => {
     return {
         type: ORDER_CHARACTERS,
-        payload: id
+        payload: orden
     }
 }
 
