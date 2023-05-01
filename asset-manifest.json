@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/RickAndMortyApp/static/css/main.571a375c.css",
+    "main.js": "/RickAndMortyApp/static/js/main.0fedff3f.js",
+    "static/media/rickandmortynight.jpg": "/RickAndMortyApp/static/media/rickandmortynight.4de8cae9961269c805e0.jpg",
+    "static/media/rickandmortyday.jpg": "/RickAndMortyApp/static/media/rickandmortyday.3bbc6fe3fc2c26638b0d.jpg",
+    "static/media/rickandmortynightcell.png": "/RickAndMortyApp/static/media/rickandmortynightcell.080c73720045809b71fc.png",
+    "static/media/rickandmortydaycell.jpg": "/RickAndMortyApp/static/media/rickandmortydaycell.49da2ace0bb074ef5915.jpg",
+    "static/media/portal_login.png": "/RickAndMortyApp/static/media/portal_login.febf5c825a4d5158167b.png",
+    "static/media/perfil.png": "/RickAndMortyApp/static/media/perfil.0231c80dd4df9a7f9d52.png",
+    "index.html": "/RickAndMortyApp/index.html",
+    "main.571a375c.css.map": "/RickAndMortyApp/static/css/main.571a375c.css.map",
+    "main.0fedff3f.js.map": "/RickAndMortyApp/static/js/main.0fedff3f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.571a375c.css",
+    "static/js/main.0fedff3f.js"
+  ]
+}
