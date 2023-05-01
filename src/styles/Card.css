@@ -1,24 +1,36 @@
+.cardContainer{
+    padding-top: 30px;
+    animation: fadeInDown 1s ease-out;
+
+}
+
 .characterCard{
     background-color: rgb(13,139,177);
     margin: 1em;
     width: fit-content;
-    padding: 1em;
+    padding: 1.5em;
     border-radius: 10px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.75);
     text-shadow: 6px 4px 7px rgba(0,0,0,0.6);
     display: flex;
     flex-direction: column;
     position: relative;
+    transition: 1s;
 }
 
 .dataCard{
+    float: center;
+    border: none;
+    padding: 0em; 
+    padding-top: 0em;       
     background-color: rgb(13,139,177);
     margin: auto;
     width: 300px;
     font-size: 0.8rem;
     border-radius: 10px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    text-shadow: 6px 4px 7px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.75);
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.6);
+    transition: 1s;
 }
 
 .characterImage:hover {
@@ -29,7 +41,7 @@
     font-size: 12px;
     margin-top: 0;
     border: 0;
-    border-radius: 90px;
+    border-radius: 50%;
     background-color: rgb(0, 0, 0);
     padding: 5px;
     color: white;
@@ -39,6 +51,11 @@
     z-index: 2;
     transition: 1s;
 }
+
+.closeButton:active{
+    transform: scale(0.9);
+    transition: 0.1s;
+  }
 
 .idDiv{
     font-size: 12px;
@@ -74,6 +91,11 @@
     z-index: 1;
 }
 
+.isfavButton:hover{
+    color: black;
+    transform: scale(0.8);
+}
+
 .closeButton:hover{
     font-weight: bold;
     transition: 1s;
@@ -86,6 +108,16 @@
     height: 300px;
     border-radius: 10px;
     background-color: azure;
+}
+
+.mood .characterCard{
+    box-shadow: 0px 0px 18px 5px rgba(255, 255, 255, 0.75);
+    transition: 1s;
+}
+
+.mood .dataCard{
+    box-shadow: 0px 0px 18px 5px rgba(255, 255, 255, 0.75);
+    transition: 1s;
 }
 
 @media (max-width: 560px) {

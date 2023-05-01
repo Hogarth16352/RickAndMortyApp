@@ -1,6 +1,8 @@
 .containerFavs {
   display: inline-flex;
   position: relative;
+  animation: fadeInUp 1s ease-out;
+
 }
 
 @media (max-width: 560px) {
@@ -12,6 +14,8 @@
 .selectDiv {
   padding: 50px;
   text-align: center;
+  animation: fadeInUp 1s ease-out;
+
 }
 
 select {

@@ -13,6 +13,7 @@
 
 .wrapper{
   width: 100%;
+  animation: fadeInDown 0.5s ease-out;
 }
 
 .wrapper .navbar{
@@ -52,7 +53,7 @@
 }
 
 .buttonNav:hover{
-    color: rgb(154, 154, 154);
+    color: rgba(235, 235, 235, 0.738);
     transition: 0.5s;
 }
 
@@ -64,6 +65,48 @@
 .logoutContainer li {
   display: inline; 
   position: relative;
+}
+
+.logoutIcon:hover{
+  color: rgb(255, 255, 255);
+  transition: 0.5s;
+}
+
+.logoutIcon:active{
+  transform: scale(0.8);
+  transition: 0.1s;
+}
+
+.moodIcon{
+  color: rgb(0, 0, 0);
+}
+
+.logoutIcon{
+  color: rgb(0, 0, 0);
+}
+
+.mood .moodIcon{
+  color: rgb(117, 117, 117);
+}
+
+.mood .logoutIcon{
+  color: rgb(117, 117, 117);
+}
+
+.mood .logoutIcon:hover{
+  filter: drop-shadow(-1px -1px 10px rgb(255, 255, 255));
+  color: rgb(255, 255, 255);
+}
+
+.moodIcon:hover{
+  filter: drop-shadow(-1px -1px 10px rgb(255, 255, 255));
+  color: rgb(255, 255, 255);
+  transition: 0.5s;
+}
+
+.moodIcon:active{
+  transform: scale(0.8);
+  transition: 0.1s;
 }
 
 @media screen and (max-width: 730px){
@@ -92,10 +135,18 @@
   .logoutContainer li {
     top: 10px;
   }
+
+  body.mood{
+    background: url("../assets/rickandmortynightcell.png") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    transition: 0.5s;
+  }
+  
 }
 
 .mood {
-  background: url("../assets/rickandmortyday.jpg") no-repeat center center fixed;
+  background: url("../assets/rickandmortynight.jpg") no-repeat center center fixed;
   background-size: cover;
   margin: 0;
   transition: 0.5s;

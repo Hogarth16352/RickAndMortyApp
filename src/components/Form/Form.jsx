@@ -38,6 +38,23 @@ export default function Form(props) {
       props.login(userData);
     }
 
+    // const handleSubmit = ( event ) => { 
+    //   event.preventDefault();
+    //   if ( !userData.username || !userData.password ) {
+    //     setErrors(
+    //       validation({
+    //         ...userData
+    //         })
+    //       )
+    //   } else {
+    //     props.login(userData);
+    //     setUserData({
+    //       username: '', 
+    //       password: ''
+    //     });
+    //   }
+    // };
+
     return (
       <div className = "formDiv">
         <div className="formImage"></div>
@@ -75,7 +92,7 @@ export default function Form(props) {
       <hr />
       <button type = 'submit'
       className="buttonForm"
-      >Log In</button>
+      >LOGIN</button>
       </form>
       </div>
     );

@@ -1,3 +1,103 @@
-div {
-    color: white;
+.sectionContainer {
+    padding-top: 50px;
+    animation: fadeInUp 1s ease-out;
 }
+
+.sectionTitle {
+    padding-bottom: 50px;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+
+}
+
+.perfilImg{
+    padding-bottom: 50px;
+}
+
+img {
+    max-width: 400px;
+    background-color: #4361ee;
+    border-radius: 50%;
+    box-shadow: 0px 0px 30px 10px #2f3546;
+    transition: 0.5s;
+}
+
+h2, p{
+    padding-top: 20px;
+}
+
+.dataDiv {
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+}
+
+.contactDiv {
+    padding-top: 70px;
+    padding-bottom: 30px;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+}
+
+.icons-social {
+    padding-top: 20px;
+    border-left: 30px;
+    top: 50%;
+    transition: 1s;
+}
+
+.contactIcon:hover{
+    filter: drop-shadow(0px 0px 5px rgb(255, 255, 255));
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+  }
+
+
+  .mood .sectionTitle {
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #212ca7, 0 0 30px #212ca7, 0 0 40px #212ca7, 0 0 55px #212ca7, 0 0 75px #212ca7;
+
+}
+
+  .mood .dataDiv {
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #212ca7, 0 0 30px #212ca7, 0 0 40px #212ca7, 0 0 55px #212ca7, 0 0 75px #212ca7;
+}
+
+  .mood .contactDiv {
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #212ca7, 0 0 30px #212ca7, 0 0 40px #212ca7, 0 0 55px #212ca7, 0 0 75px #212ca7;
+}
+
+
+  .mood img{
+    box-shadow: 0px 0px 30px 5px #ffffff;
+    transition: 0.5s;
+}
+
+
+@media (max-width: 560px) {  
+
+    .sectionContainer {
+        padding-top: 30px;
+    }
+    
+    .sectionTitle {
+        padding-bottom: 30px;
+    
+    }
+    
+    .perfilImg{
+        padding-bottom: 30px;
+    }
+    
+    h2, p{
+        padding-top: 10px;
+    }
+    
+    .contactDiv {
+        padding-top: 50px;
+    }
+    
+    .icons-social {
+        padding-top: 20px;
+    }
+
+      img {
+        width: 70%;
+          height: auto;
+    }
+  }

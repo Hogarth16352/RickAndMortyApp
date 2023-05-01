@@ -17,10 +17,11 @@
     background-position: center center;
     width: 70%;
     height: 70%;
-    animation: rotateBackground 20s linear infinite;
     margin-top: 2rem;
     z-index: -1;
     margin: 0%;
+    transition: 0.5s;
+    animation: fadeInUp 1s ease-out forwards, rotateBackground 20s linear infinite;
   }
   
   .formContainer {
@@ -35,15 +36,12 @@
   }
   
   .formTitle {
-    font-size: 50px;
+    font-size: 7vw;
     font-family: 'Creepster', cursive;
-    font-weight: bold;
-    color: aqua;
-    -webkit-text-stroke: 0.5px rgb(13, 13, 12);
-    font-weight: bold;
+    color: rgb(18, 176, 201);
+    -webkit-text-stroke: 2px rgb(200, 221, 93);
     text-align: center;
     margin-bottom: 20px;
-    animation: fadeInDown 1s ease-out;
   }
   
   label {
@@ -68,17 +66,23 @@
     color: #fff;
     font-weight: bold;  
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 10px 20px;
-    font-size: 24px;
+    font-size: 20px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.3); /* se agrega la sombra */
   }
   
   button.buttonForm:hover {
     background-color: #fff;
     color: #000;
     font-weight: bold;
+  }
+
+  button.buttonForm:active {
+    transform: scale(0.8);
+    transition: 0.1s;
   }
 
   .errorInput {
@@ -91,11 +95,10 @@
 
   .error{
     background-color: rgba(139, 37, 37, 0.226);
-    font-weight: bold;
     color: red;
     width: auto;
     padding: 5px 0;
-    font-size: 24px;
+    font-size: 15px;
   }
   
   @media only screen and (max-width: 768px) {
@@ -112,6 +115,13 @@
       transform: rotate(360deg);
     }
   }
-  
-  
+
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+  }
   

@@ -23,13 +23,14 @@ const Favorites = () => {
 
     <div>
       <div className='selectDiv'>
-        <select className='order-menu' name="order" onChange={handleOrderChange}>
-          <option value="" selected disabled hidden>Ordenar</option>
+      <h1 className="sectionTitle">Favorites</h1>
+        <select className='order-menu' name="order" value="1" onChange={handleOrderChange}>
+          <option value="1" disabled hidden>Ordenar</option>
           <option value="Ascendente">Ascendente</option>
           <option value="Descendente">Descendente</option>
         </select>      
-        <select className='filter-menu' name="filter" onChange={handleFilterChange}>
-          <option value="" selected disabled hidden>Filtrar</option>
+        <select className='filter-menu' name="filter" value="1" onChange={handleFilterChange}>
+          <option value="1" disabled hidden>Filtrar</option>
           <option value="id">Id</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
@@ -44,9 +45,10 @@ const Favorites = () => {
             deleteFavorites: deleteFavorites,
           };
           return(
-            <div className = "containerFavs">
+            <div 
+              key={id}            
+              className = "containerFavs">
               <Card 
-              key={id}
               id={id}
               name={name}
               species={species}

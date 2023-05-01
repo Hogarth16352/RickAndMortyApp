@@ -47,7 +47,7 @@ export function Card( { id, name, species, status, origin, gender, image, onClos
       <div className='cardContainer'>
          <div className='characterCard'>
          { isFav ? ( <button className = 'isfavButton' onClick={handleFavorite}><AiFillHeart size={25} color = "red" /></button> ) : 
-                  ( <button className = 'nofavButton' onClick={handleFavorite}><AiOutlineHeart size={25} color="black" /></button> )
+                  ( <button className = 'nofavButton' onClick={handleFavorite}><AiOutlineHeart size={25} color="black"/></button> )
           }
 
           {onClose && (

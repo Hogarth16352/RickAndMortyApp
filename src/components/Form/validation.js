@@ -16,17 +16,17 @@ export default function validation( userData ){
         errors.username = 'El nombre de usuario no puede tener mas de 35 caracteres';
       }
 
-    if( !regexPass.test(userData.password) ){
+    if(!userData.password){
+      errors.password = 'La contraseña es obligatoria';
+    }
+
+    if( userData.password.length > 0 && !regexPass.test(userData.password) ){
        errors.password = 'La contraseña debe tener al menos un número';
     }
 
-    if( userData.password.length < 6 ){
-        errors.password = 'La contraseña debe tener mas de 5 caracteres';
+    if( userData.password.length > 0 && userData.password.length < 8 ){
+        errors.password = 'La contraseña debe tener al menos 8 caracteres';
      }
-
-     if( userData.password.length > 10 ){
-      errors.password = 'La contraseña no debe tener mas de 10 caracteres';
-    }
 
   return errors;
 
