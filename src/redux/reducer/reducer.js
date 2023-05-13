@@ -10,12 +10,12 @@ const rootReducer = ( state = initialState , action ) => {
         case ADD_FAVORITES:
             return {
                 ...state,
-                myFavorites: [ action.payload, ...state.allCharacters ],
+                myFavorites: [ action.payload, ...state.allCharacters  ],
                 allCharacters: [ action.payload, ...state.allCharacters ]
             }
 
         case DELETE_FAVORITES:
-            const deleteFavorites = state.myFavorites.filter(
+            const deleteFavorites = state.allCharacters.filter(
                 (fav) => fav.id !== action.payload
             );
             return {
@@ -25,18 +25,24 @@ const rootReducer = ( state = initialState , action ) => {
             };        
         
         case FILTER_CHARACTERS:
-            const filterCharacters = [ ...state.myFavorites ];
-            const filteredFavorites = filterCharacters.filter(
+            const filteredCharacters = state.allCharacters.filter(
                 (char) => char.gender === action.payload
             );
             return {
                 ...state,
-                myFavorites: filteredFavorites
+                myFavorites: [...filteredCharacters]
             };
+            // case FILTER_CARDS:
+            //     let genderFilter = [...state.allCharacters];
+            //     if (action.payload !== 'all') genderFilter = genderFilter.filter(ch => ch.gender ===
+            //         action.payload);
+            //     return {
+            //         ...state,
+            //         myFavorites: genderFilter,
+            //     }
 
         case ORDER_CHARACTERS:
-            const { allCharacters: characters } = state;
-            const sortedCharacters = characters.slice().sort((a, b) => {
+            const sortedCharacters = state.allCharacters.slice().sort((a, b) => {
                 if (action.payload === 'Ascendente') {
                     return a.id - b.id;
                 } else {

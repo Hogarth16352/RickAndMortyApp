@@ -49,7 +49,7 @@ export const Nav = ( props ) => {
                 </li>
                 <li>
                    <NavLink to="/about">
-                      <button className="buttonNav">About</button>  
+                      <button className="buttonNav">AboutMe</button>  
                    </NavLink>
                 </li>
                 </ul>

@@ -31,7 +31,7 @@ const Favorites = () => {
         </select>      
         <select className='filter-menu' name="filter" value="1" onChange={handleFilterChange}>
           <option value="1" disabled hidden>Filtrar</option>
-          <option value="id">Id</option>
+          <option value="all">ALL</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
           <option value="Genderless">Genderless</option>

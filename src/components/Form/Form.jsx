@@ -6,7 +6,7 @@ import validation from './validation';
 export default function Form(props) {
 
     const [userData, setUserData] = React.useState({ 
-      username: "alan@mail.com",
+      username: "alan@gmail.com",
       password: '123456' 
     });
 

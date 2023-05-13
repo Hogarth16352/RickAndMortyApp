@@ -15,21 +15,36 @@ function App() {
 
    const [characters, setCharacters] = useState([]);
    const [access, setAccess] = useState(false);
-   const username = "alan@mail.com";
-   const password = "123456";
+   // const username = "alan@mail.com";
+   // const password = "123456";
    const navigate = useNavigate();
 
    function login(userData) {
-      if (userData.password === password && userData.username === username) {
-         setAccess(true);
-         navigate('/home');
-       }
+      axios.get( `http://localhost:3001/rickandmorty/login?password=${userData.password}&email=${userData.username}` )
+         .then( ( { data } ) => {
+            console.log( data.access );
+         if( data.access ){
+            setAccess( data.access );
+            navigate('/home');
+         }
+         } );
+   //    if ( userData.password === password && userData.username === username) {
+   //       setAccess(true);
+   //       navigate('/home');
+   //     }
      }
 
     const logout = () => {
       setCharacters([]);
-      setAccess(false);
-      navigate('/');
+      //setAccess(false);
+      axios.get( `http://localhost:3001/rickandmorty/login?password=1234&email=1234` )
+         .then( ( { data } ) => {
+            console.log( data.access );
+         if( !data.access ){
+            setAccess( data.access );
+            navigate('/');
+         }
+         } );
    }
  
 
@@ -37,12 +52,38 @@ function App() {
       !access && navigate('/');
    }, [access]);
 
+   // useEffect( () => {
+   //    const requests = [];
+      
+   //    for( let num = 22 ; num < 24 ; num++ ){
+   //       requests.push(
+   //          axios.get(`https://rickandmortyapi.com/api/character?page=${ num }`)
+   //       );
+   //    }
+
+   //    Promise.all( requests )
+   //       .then( ( results ) => {
+   //          let newCharacters = [];
+   //          results.map(
+   //             ( chars ) => ( newCharacters = [ ...newCharacters, ...chars.data.results ] )
+   //          );
+   //          setCharacters( [...newCharacters] );
+   //          dispatch( addCharacter( newCharacters) )
+   //       })
+   //       .catch( (error) => {});
+   // }, [] );
+
    function onSearch(id) {
 
       //const URL_BASE = "https://be-a-rym.up.railway.app/api"
       //const KEY = "2d0fd52418f5.d36077a3b4c1857914f"
-      axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
       //axios( `${URL_BASE}/character/${id}?key=${KEY}` ).then(({ data }) => {
+      // axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
+      
+      
+      
+      axios(`http://localhost:3001/rickandmorty/character/${id}`)
+      .then(({ data }) => {
          if (data.name) {
             const characterExists = characters.find((char) => char.id === data.id);//Se busca el personaje en el estado
             if (!characterExists) {//Si no existe muestra el estado con las imagenes solicitadas

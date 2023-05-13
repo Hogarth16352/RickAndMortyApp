@@ -10,7 +10,8 @@ export default function Detail(props) {
     const [character, setCharacter] = useState({});
 
     useEffect(() => {
-      axios.get(`https://rickandmortyapi.com/api/character/${detailId}`)
+      // axios.get(`https://rickandmortyapi.com/api/character/${detailId}`)
+      axios.get(`http://localhost:3001/rickandmorty/character/detail/${detailId}`)
         .then((response) => {
           const char = response.data;
           if (char.name) {
